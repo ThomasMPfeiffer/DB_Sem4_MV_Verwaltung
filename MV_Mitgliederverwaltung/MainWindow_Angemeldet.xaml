@@ -1,0 +1,68 @@
+﻿<Window x:Class="MV_Mitgliederverwaltung.MainWindowAngemeldet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MV_Mitgliederverwaltung"
+        mc:Ignorable="d"
+        Title="Mitgliederverwaltung" WindowState="Maximized"
+        Background="DarkBlue"
+        Loaded="Window_Loaded" Height="547" Width="988.5">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+
+                <MenuItem Header="_Datei">
+                    <MenuItem Name="MenuItem_ExcelExport" Header="Excel Exort" Click="MenuItem_ExcelExport_Click"/>
+                    <MenuItem Name="MenuItem_Speichern" Header="Speichern" Click="MenuItem_Speichern_Click"/>
+                    <MenuItem Header="_Beenden" Click="MenuItemBeenden_Click"/>
+                </MenuItem>
+                <MenuItem Header="_Optionen">
+                    <MenuItem Name="MenuItemAdminaendern" Header="Admins der ausgewählten Sparte verwalten" Click="MenuItemAdminaendern_Click"/>
+                </MenuItem>
+            </Menu>
+
+            <TextBlock Grid.Row="0"
+                   Text="Mitglieder des Musikvereins"
+                   FontSize="40"
+                   Foreground="Yellow"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+
+            <StackPanel  Orientation="Horizontal" Margin="40,10,10,10">
+                <ComboBox Name="cmb_Verein" Width="120" SelectionChanged="Cmb_Verein_SelectionChanged">
+
+                </ComboBox>
+
+                <ComboBox Name="cmb_Sparte" Width="120" Margin="20,0,0,0" SelectionChanged="Cmb_Sparte_SelectionChanged">
+                </ComboBox>
+            </StackPanel>
+
+        </DockPanel>
+
+        <DataGrid Name="DataGridMitglieder"
+                  Grid.Row="1"
+                  ColumnWidth="*"
+                  IsSynchronizedWithCurrentItem="True"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  Margin="0,10,0,0"
+                  AutoGeneratingColumn="DataGridMitglieder_AutoGeneratingColumn">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="Eintragloeschen" Click="Eintragloeschen_Click">Löschen</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

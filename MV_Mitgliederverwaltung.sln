@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1231
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MV_Mitgliederverwaltung", "MV_Mitgliederverwaltung\MV_Mitgliederverwaltung.csproj", "{88EDC832-F74A-4BA4-8785-1CBB88C724B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MV_MitgliederverwaltungTests", "MV_MitgliederverwaltungTests\MV_MitgliederverwaltungTests.csproj", "{E8001D8E-2088-482A-A428-291774164CA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88EDC832-F74A-4BA4-8785-1CBB88C724B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88EDC832-F74A-4BA4-8785-1CBB88C724B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88EDC832-F74A-4BA4-8785-1CBB88C724B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88EDC832-F74A-4BA4-8785-1CBB88C724B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8001D8E-2088-482A-A428-291774164CA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8001D8E-2088-482A-A428-291774164CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8001D8E-2088-482A-A428-291774164CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8001D8E-2088-482A-A428-291774164CA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6F1298D-105F-46AD-8C2D-02C4ED7AB2A8}
+	EndGlobalSection
+EndGlobal
